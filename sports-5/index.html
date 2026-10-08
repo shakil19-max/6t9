@@ -1,453 +1,752 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   
-	<meta name="keywords" content="">
-    <meta name="author" content="">
-	
-	<link href="favicon.png" rel="icon" type="image/ico">
-	<link href="favicon.png" rel="icon" type="image/png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>ALL SPORTS TV STREAM....</title>
-    <meta name="description" content="Watch ALL SPORTS TV STREAMing Without Buffering. Support Android, iPhone, iPad, Tablet." />
+<!-- =========================
+     CHANGE WEBSITE TITLE HERE
+========================= -->
+<title>SPORTS LIVE 2026</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-	<link href="maxcdn/font-awesome.min.css" rel="stylesheet">
-	
-    <!-- Custom styles for this template -->
-    <link href="assets/css/style.css" rel="stylesheet">
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark top_menu">
-      <div class="container mobile_header">
-        <a class="logo navbar-brand" href="register.html">SPORTS LIVE</a>
-               
-        <ul class="nav justify-content-end">
-          
-          <li class="dropdown">
-              <a href="#" class="signin_btn"  role="button" aria-expanded="true">
-                  <i class="fa fa-user"></i> Login | </span>
-              </a>
-			  <a class="affiliate" href="register.html">Register</a>
-          </li>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-          
-        </ul>
-        
-      </div>
-    </nav>
+:root{
+    --bg:#080c12;
+    --card:#101722;
+    --text:#ffffff;
+    --muted:#9aa5b3;
+    --accent:#00d9ff;
+    --accent2:#7c3aed;
+    --border:rgba(255,255,255,.10);
+}
 
-  <div class="container">
-      <div class="header">
-        <h1 class="text-center">ALL SPORTS TV STREAM</h1>
-        <center>
-   <script>
-  atOptions = {
-    'key' : '75b9f35d1efebc40de62b1f4566ff59b',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/75b9f35d1efebc40de62b1f4566ff59b/invoke.js"></script>
-    <br>
-    
-    </center>
-      </div>
-      <div class="video_section" id="video">
-	  	<center><img class="img img-fluid" src="open1.jpg"></center>
-        <div class="video_player videoPlayerBtn">
-		  <span id="play" class="play-btn-border ease"><i class="fa fa-play-circle headline-round ease" aria-hidden="true"></i></span>
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+}
+
+/* TOP BAR */
+.topbar{
+    height:34px;
+    background:#111923;
+    border-bottom:1px solid var(--border);
+    display:flex;
+    align-items:center;
+}
+
+.topbar-inner{
+    width:94%;
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    font-size:11px;
+    color:#c8d0da;
+}
+
+.live{
+    color:#fff;
+    font-weight:bold;
+}
+
+.live::before{
+    content:"";
+    width:7px;
+    height:7px;
+    background:#ff3333;
+    display:inline-block;
+    border-radius:50%;
+    margin-right:6px;
+    box-shadow:0 0 10px #ff3333;
+}
+
+/* HEADER */
+header{
+    text-align:center;
+    padding:25px 15px 20px;
+}
+
+.logo{
+    font-size:clamp(28px,5vw,45px);
+    font-weight:900;
+    letter-spacing:-1px;
+}
+
+.logo span{
+    color:var(--accent);
+}
+
+.subtitle{
+    color:var(--muted);
+    margin-top:10px;
+    font-size:13px;
+}
+
+/* CONTAINER */
+.container{
+    width:94%;
+    max-width:1100px;
+    margin:auto;
+}
+
+/* AD */
+.ad-title{
+    text-align:center;
+    font-size:9px;
+    color:#687484;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:6px;
+}
+
+.ad-box{
+    min-height:90px;
+    width:100%;
+    border:1px dashed rgba(255,255,255,.18);
+    border-radius:8px;
+    background:rgba(255,255,255,.025);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#667180;
+    font-size:10px;
+    overflow:hidden;
+}
+
+.ad-box iframe,
+.ad-box img{
+    max-width:100%;
+}
+
+/* HERO */
+.hero{
+    position:relative;
+    min-height:480px;
+    margin-top:25px;
+    border-radius:15px;
+    overflow:hidden;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(2,7,13,.88),
+            rgba(2,7,13,.30)
+        ),
+        url("https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=85");
+
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:flex-end;
+
+    border:1px solid rgba(255,255,255,.12);
+    box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+
+.hero-content{
+    padding:45px;
+    max-width:700px;
+}
+
+.badge{
+    display:inline-block;
+    padding:7px 12px;
+    border-radius:30px;
+    background:rgba(0,0,0,.55);
+    border:1px solid rgba(255,255,255,.15);
+    font-size:10px;
+    font-weight:bold;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-size:clamp(35px,6vw,65px);
+    line-height:.95;
+    margin:18px 0;
+    letter-spacing:-2px;
+}
+
+.hero p{
+    color:#c2cbd6;
+    max-width:580px;
+    line-height:1.6;
+    font-size:14px;
+}
+
+.buttons{
+    display:flex;
+    gap:10px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    border:none;
+    cursor:pointer;
+    padding:13px 20px;
+    border-radius:8px;
+    font-weight:bold;
+    font-size:12px;
+}
+
+.primary{
+    background:var(--accent);
+    color:#001016;
+}
+
+.secondary{
+    background:rgba(255,255,255,.10);
+    color:white;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* SECTIONS */
+.section{
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.section-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:14px;
+}
+
+.section-head h2{
+    font-size:19px;
+}
+
+.section-head span{
+    color:#738092;
+    font-size:10px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+}
+
+.card{
+    padding:20px;
+    background:linear-gradient(
+        145deg,
+        rgba(255,255,255,.05),
+        rgba(255,255,255,.015)
+    );
+    border:1px solid var(--border);
+    border-radius:12px;
+}
+
+.card small{
+    color:var(--accent);
+    font-size:9px;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:1px;
+}
+
+.card h3{
+    margin:9px 0;
+    font-size:16px;
+}
+
+.card p{
+    color:var(--muted);
+    font-size:12px;
+    line-height:1.5;
+}
+
+/* BODY AD */
+.body-ad{
+    margin:30px 0;
+}
+
+/* FOOTER */
+footer{
+    margin-top:45px;
+    border-top:1px solid var(--border);
+    color:#657182;
+    font-size:10px;
+}
+
+.footer-inner{
+    width:94%;
+    max-width:1100px;
+    margin:auto;
+    padding:25px 0;
+    display:flex;
+    justify-content:space-between;
+    gap:15px;
+}
+
+/* MODAL */
+.modal{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.78);
+    z-index:999;
+    align-items:center;
+    justify-content:center;
+    padding:20px;
+}
+
+.modal.show{
+    display:flex;
+}
+
+.modal-box{
+    width:100%;
+    max-width:500px;
+    background:#101722;
+    border:1px solid var(--border);
+    border-radius:14px;
+    padding:25px;
+}
+
+.modal-box h2{
+    margin-bottom:10px;
+}
+
+.modal-box p{
+    color:var(--muted);
+    font-size:13px;
+    line-height:1.6;
+}
+
+.close{
+    float:right;
+    background:none;
+    border:0;
+    color:white;
+    font-size:24px;
+    cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .hero{
+        min-height:520px;
+    }
+
+    .hero-content{
+        padding:25px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+        text-align:center;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     TOP BAR
+========================= -->
+<div class="topbar">
+    <div class="topbar-inner">
+
+        <div class="live">
+            SPORTS LIVE
         </div>
-		<div class="text-center videoLoading" style="display:none">
-			<span class="spinner loading"></span>
-         </div>
-		 
-		 <div class="controls">	
-		 	<div class="controlContent">	 	 	
-				<div id="leftControls" >
-					<i class="fa fa-play controlBtn videoPlayerBtn" aria-hidden="true"></i> &nbsp;&nbsp;	
-					<i class="fa fa-volume-up controlBtn" aria-hidden="true"></i>		
-				</div>	
-				<div id="rightControls">
-					<span class="live-badge__icon"></span> LIVE &nbsp;&nbsp;	
-					<i class="fa fa-cog"></i> &nbsp;&nbsp;
-					<i class="fa fa-arrows icon-size-fullscreen"></i>	
-				</div>	
-			</div>		
-		 </div>
-		 
-      </div>
-      
-	  <br />
-	  
-	  <div class="text-center">
-		<a class="btn btn-outline affiliate" href="register.html">Watch Live Now</a>
-	  </div>
-	  
-	  <br />
-	  
+
+        <!-- CHANGE THIS -->
+        <div>
+            Login | Register
+        </div>
+
+    </div>
+</div>
 
 
-           <center> <div class="col-md-7">
-			<div class="device-features__content text-left">
-				<p class="sub_headline"><center>Watch ALL SPORTS TV STREAMing Online, TV Coverage, Replays, Highlights from Anywhere at Anytime. Optimized for PC, Mac, iPad, iPhone, Android, PS4, Xbox One, and Smart Tvs.<center></p>
-					<center>
-	<script>
-  atOptions = {
-    'key' : 'f9e21c5d03572669fb7826736ddbcc39',
-    'format' : 'iframe',
-    'height' : 250,
-    'width' : 300,
-    'params' : {}
-  };
+<!-- =========================
+     HEADER
+========================= -->
+<header>
+
+    <!-- CHANGE WEBSITE TITLE -->
+    <div class="logo">
+        SPORTS <span>LIVE</span> 2026
+    </div>
+
+    <!-- CHANGE SUBTITLE -->
+    <div class="subtitle">
+        Watch sports events, matches and live updates in one place.
+    </div>
+
+</header>
+
+
+<div class="container">
+
+
+<!-- ==================================================
+     TOP BANNER AD
+
+     ????? ????? Ad Network-?? code ?????
+
+     ????:
+
+     <script>
+        YOUR AD SCRIPT
+     </script>
+
+================================================== -->
+
+<div class="ad-title">
+    Advertisement
+</div>
+
+<div class="ad-box">
+
+    <!-- PASTE YOUR AD CODE HERE -->
+
+    <span>
+        TOP BANNER AD 970 × 90
+    </span>
+
+</div>
+
+
+<!-- =========================
+     HERO SECTION
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            ? Live Sports
+        </div>
+
+        <!-- CHANGE HERO TITLE -->
+        <h1>
+            BIG MATCHES.<br>
+            ONE PLACE.
+        </h1>
+
+        <!-- CHANGE DESCRIPTION -->
+        <p>
+            Welcome to your custom sports landing page.
+            Add your own matches, sports news, events,
+            sponsors and advertisements here.
+        </p>
+
+        <div class="buttons">
+
+            <button
+                class="btn primary"
+                onclick="goMatches()">
+                VIEW MATCHES
+            </button>
+
+            <button
+                class="btn secondary"
+                onclick="openInfo()">
+                MORE INFO
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     BODY BANNER AD
+================================================== -->
+
+<div class="body-ad">
+
+    <div class="ad-title">
+        Advertisement
+    </div>
+
+    <div class="ad-box">
+
+        <!-- PASTE YOUR BODY AD CODE HERE -->
+
+        <span>
+            BODY BANNER AD 728 × 90
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     SPORTS SECTION
+========================= -->
+
+<section
+    class="section"
+    id="matches">
+
+    <div class="section-head">
+
+        <h2>
+            Featured Sports
+        </h2>
+
+        <span>
+            EDIT FROM HTML
+        </span>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <!-- CARD 1 -->
+
+        <div class="card">
+
+            <small>
+                Football
+            </small>
+
+            <!-- CHANGE CARD TITLE -->
+            <h3>
+                Today's Matches
+            </h3>
+
+            <!-- CHANGE CARD TEXT -->
+            <p>
+                Add your football match schedule,
+                event information or promotional text here.
+            </p>
+
+        </div>
+
+
+        <!-- CARD 2 -->
+
+        <div class="card">
+
+            <small>
+                Basketball
+            </small>
+
+            <h3>
+                Live Events
+            </h3>
+
+            <p>
+                Add basketball events, league information
+                or any content you want.
+            </p>
+
+        </div>
+
+
+        <!-- CARD 3 -->
+
+        <div class="card">
+
+            <small>
+                Tennis
+            </small>
+
+            <h3>
+                Latest Action
+            </h3>
+
+            <p>
+                Add tennis news, match information,
+                tournament details or other content.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ==================================================
+     SECOND BODY AD
+================================================== -->
+
+<div class="body-ad">
+
+    <div class="ad-title">
+        Advertisement
+    </div>
+
+    <div class="ad-box">
+
+        <!-- PASTE YOUR SECOND AD CODE HERE -->
+
+        <span>
+            SECOND BODY AD
+        </span>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     INFORMATION
+========================= -->
+
+<section class="section">
+
+    <div class="card">
+
+        <small>
+            Sports Hub
+        </small>
+
+        <h3>
+            Your Content Goes Here
+        </h3>
+
+        <p>
+            You can replace this section with match schedules,
+            sports news, sponsor information, announcements,
+            videos or any other content.
+        </p>
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-inner">
+
+        <!-- CHANGE COPYRIGHT -->
+        <div>
+            © 2026 SPORTS LIVE. All Rights Reserved.
+        </div>
+
+        <div>
+            Privacy Policy · Terms · Contact
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- =========================
+     MODAL
+========================= -->
+
+<div
+    class="modal"
+    id="infoModal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="closeInfo()">
+            ×
+        </button>
+
+        <h2>
+            Sports Live
+        </h2>
+
+        <p>
+            Replace this popup with your own information,
+            sponsor details, match information or website
+            announcement.
+        </p>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* VIEW MATCHES BUTTON */
+
+function goMatches(){
+
+    document
+        .getElementById("matches")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+/* MORE INFO BUTTON */
+
+function openInfo(){
+
+    document
+        .getElementById("infoModal")
+        .classList.add("show");
+
+}
+
+
+/* CLOSE MODAL */
+
+function closeInfo(){
+
+    document
+        .getElementById("infoModal")
+        .classList.remove("show");
+
+}
+
+
+/* CLICK OUTSIDE TO CLOSE */
+
+document
+    .getElementById("infoModal")
+    .addEventListener("click", function(e){
+
+        if(e.target === this){
+            closeInfo();
+        }
+
+    });
+
 </script>
-<script src="https://www.highperformanceformat.com/f9e21c5d03572669fb7826736ddbcc39/invoke.js"></script>
 
-    <br>
-    
-    </center>
-				<center> <div class="device-features__brands">
-					<img class="img-fluid" width="30" src="assets/img/devices_pc.png" alt="All Devices">
-					<img class="img-fluid" width="30" src="assets/img/apple_pc.png" alt="iOS">
-					<img class="img-fluid" width="30" src="assets/img/android_pc.png" alt="Android">
-					<img class="img-fluid" width="30" src="assets/img/chromecast_pc.png" alt="Chromecast">
-				</div> </center> </center>
-				
-				<!--<div class="row feature">
-					<div class="col-md-3">
-						<h6 class="list-group-item-heading"><i class="fa fa-film biru fa-fw"></i> High Quality Streaming</h6>
-						<p class="feature_sub_title">All of the ALL SPORTS & MORE is available in the HD Quality or even higher!</p>
-					</div>
-					<div class="col-md-3">
-						<h6 class="list-group-item-heading"><i class="fa fa-youtube-play pink fa-fw"></i> Watch Without Limits</h6>
-						<p class="feature_sub_title">You will get access to all of your favourite ALL SPORTS & MORE without any limits.</p>
-					</div>
-					<div class="col-md-3">
-						<h6 class="list-group-item-heading"><i class="fa fa-ban coklat fa-fw"></i> No Ads, 100% Free Advertising</h6>
-						<p class="feature_sub_title">Your account will always be free from all kinds of advertising.</p>
-					</div>
-					<div class="col-md-3">
-						<h6 class="list-group-item-heading"><i class="fa fa-tablet ijo fa-fw"></i> Watch anytime, anywhere</h6>
-						<p class="feature_sub_title">It works on your Mobile, TV, PC or MAC!</p>
-					</div>
-				</div>-->
-				
-				<center> <a href="register.html" class="btn btn-md btn-outline affiliate">Create Free Account</a> </center>
-			</div>
-		</div>
-	  </div>
-  </div>
-			   
-				     
-  <footer class="footer">
-      <div class="container">
-      	<div class="row">
-		  <div class="col-md-6 col-xs-12">
-		  	<div class="copyright">Copyright @ ESPN Network | All Rights Reserved</div>
-		  </div>
-		  <div class="col-md-6 col-xs-12">
-			<div class="footer__links d-flex justify-content-end">
-				<a href="dmca.html" data-page='dmca' data-title="DMCA" class="info">DMCA</a>
-				<a href="privacy.html" data-page='privacy'  data-title="Privacy Policy" class="info">Privacy Policy</a>
-				<a href="terms-condition.html" data-page='terms' data-title="Terms and Condition" class="info">Terms &amp; Condition</a>
-				
-			</div>
-		  </div>
-		</div>
-      </div>
-    </footer>
-	
-	<div id="singin_panel">
-		<div class="signin__close">
-		<i class="fa fa-close fa-lg" aria-hidden="true"></i>
-		</div>
-		
-		
-		<div class="signin__holder">
-			<form id="signinform">
-				<div class="signin__default">
-					<h1>Sign In</h1>
-					<div class="signin__group">
-						<label for="email" class="">Email</label>
-						<input type="text" id="email" placeholder="Enter your email">
-					</div>
-					<div class="signin__group">
-						<label for="password" class="">Password</label>
-						<span class="label-note" id="forgotpass">Forgot Password?</span>
-						<input type="password" id="password" placeholder="Enter your password">
-					</div>
-					<div class="form-alert" style="display: none;">Oops! You forgot to enter an email address</div>
-					<button class="btn btn-outline btn-md mt-3 singin_btn" type="submit">Sign In</button>
-					<div class="signin__footer">
-						<a href="register.html" class="affiliate" >Don't have an account? <span>Sign Up</span></a>
-					</div>
-				</div>
-			</form>
-			
-			<form id="resetpassform">
-				<div class="signin__resetpassword" style="display: none;">
-					<h1>Reset Password</h1>
-					<p class="text-muted">Enter your email address and we'll send you a link to reset your password.</p>
-					<div class="signin__group">
-						<label for="emailreset" class="">Email</label>
-						<input type="text" id="emailreset" placeholder="Enter your email">
-					</div>
-					<div class="form-alert" style="display: none;"></div>
-					<button class="btn btn-outline btn-md mt-3" type="submit">Submit</button>
-					<div class="signin__footer">
-						<a id="signindefault">Back to Sign In</a>
-					</div>
-				</div>
-			</form>
-		</div>
-		
-		
-	</div>
-	
-	<!-- Modal -->
-<div class="modal fade" id="video_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header modal_header_info">
-        <h6 class="modal-title text-center" id="exampleModalLabel">Please Sign Up to Watch ALL SPORTS & MORE Live Online</h6>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="row">
-			<div class="col-md-6">
-				<div><img class="img-fluid" src="open1.jpg" alt="image"></div>
-			   
-				<h5>Member Login</h5>
-				<div class="form-group">
-					<input type="text" class="form-control input-sm" id="userid" placeholder="username">
-				</div>
-				<div class="form-group">
-					<input type="password" class="form-control input-sm" id="password" placeholder="password">
-				</div>
-				<p class="msg">
-				</p>
-				<input type="button" id="modal_login_btn" class="btn btn-primary" value="Log in">
-				<a class="affiliate btn btn-block btn-success" href="register.html" target=""> Sign Up</a>
-			</div>
-			<div class="col-md-6">
-				<div class="list-group">
-					<div class="list-group-item modal-list">
-						<h6 class="list-group-item-heading"><i class="fa fa-film biru fa-fw"></i> High Quality Streaming</h6>
-						<p class="list-group-item-text">All of the ALL SPORTS & MORE are available in the HD Quality or even higher!</p>
-					</div>
-					<div class="list-group-item modal-list">
-						<h6 class="list-group-item-heading"><i class="fa fa-youtube-play pink fa-fw"></i> Watch Without Limits</h6>
-						<p class="list-group-item-text">You will get access to all of your favourite ALL SPORTS & MORE without any limits.</p>
-					</div>
-					<div class="list-group-item modal-list">
-						<h6 class="list-group-item-heading"><i class="fa fa-ban coklat fa-fw"></i> No Ads, 100% Free Advertising</h6>
-						<p class="list-group-item-text">Your account will always be free from all kinds of advertising.</p>
-					</div>
-					<div class="list-group-item modal-list">
-						<h6 class="list-group-item-heading"><i class="fa fa-tablet ijo fa-fw"></i> Watch anytime, anywhere</h6>
-						<p class="list-group-item-text">It works on your Mobile, TV, PC or MAC!</p>
-					</div>                   
-				</div>
-			</div>
-		</div>
-      </div>
-	  
-    </div>
-  </div>
-</div>
-
-
-<div class="modal fade" id="page_modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="info_page_title"></h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        
-      </div>
-      <div class="modal-footer">
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.html"><\/script>')</script>
-    
-    <script src="assets/js/bootstrap.min.js"></script>
-  </body>
-
-<!-- Mirrored from freedomtvanydevice.com/nrllive/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Jun 2020 15:16:27 GMT -->
-
-<!-- Mirrored from espn3livetv.com/home/watch/soccer/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 13 Jun 2020 08:59:50 GMT -->
+</body>
 </html>
-
-
-<script type="text/javascript">
-$(function(){
-	  $('.signin_btn').on('click', function(e){
-	  		e.preventDefault();
-	  		$('#singin_panel').addClass('open');
-	  });
-	  
-	  $('.signin__close').on('click', function(e){
-	  	e.preventDefault();
-	  	$('#singin_panel').removeClass('open');
-	  });
-	  
-	  $('#forgotpass').on('click', function(e){
-	  	e.preventDefault();
-	  	$('.signin__default').hide();
-		$('.signin__resetpassword').show();
-	  });
-	  
-	  $('#signindefault').on('click', function(e) {
-	  	e.preventDefault();
-	  	$('.signin__default').show();
-		$('.signin__resetpassword').hide();
-	  });
-	  $('.singin_btn').on('click', function(e) {
-	  	e.preventDefault();
-	  	$('.form-alert').show();
-		$('#email').addClass('invalid');
-	  });
-	  
-	  $('.login_btn').on('click', function(e){
-	  	e.preventDefault();
-	  	$('.login_refresh').show();
-		$('.login_btn').hide();
-		$('.loginError').hide();
-	  	setTimeout(function(){
-			$('.memberLogin').hide();
-			$('.login_refresh').hide();
-			$('.loginError').show();
-			$('.login_btn').show();
-		},2000);
-	  });
-	  
-	  $('#modal_login_btn').on('click', function(e){
-	  	e.preventDefault();
-	  	str ="<span class='badge badge-info'>Please wait...</span>";
-	  	$('.msg').html(str);
-		$('.msg').addClass("");
-	  	setTimeout(function(){
-			str ="<span class='badge badge-warning'>Wrong Username or Password</span>";
-	  		$('.msg').html(str);
-		},2000);
-	  });
-	  
-	
-	  $('.videoPlayerBtn').on('click', function(e){
-	  	e.preventDefault();
-		let url=$(this).attr('data-url');
-		$('.video_player').hide();
-		$('.videoLoading').show();
-	
-		setTimeout(function(){ 
-		 // window.location.href=url;
-		 $('#video_modal').modal('show');
-		}, 2000);
-	  });
-	  
-	  $('#video_modal').on('hidden.bs.modal', function (e) {
-	  		e.preventDefault();
-	  		$('.videoLoading').hide();
-			$('.video_player').show();
-		});
-	  
-	  $('.info').on('click', function(e){
-		 e.preventDefault();
-		 var page = $(this).attr('data-page');
-		 page = page+'.php'
-		 page_title = $(this).attr('data-title');
-		 //$("#page_modal").load("http://192.168.0.113/landing_page/dcma.php");
-		 $('#page_modal').find('.modal-body').load(page, function(data){
-		 	$('#info_page_title').text(page_title);
-			$('#page_modal').modal('show');
-		 });
-		 //alert(page);
-	  });
-	  
-	  $('.affiliate').on('click', function(e){
-	  	e.preventDefault();
-		window.location = "register.html";
-	  });
-	  
-	  $(document).on('click', '.icon-size-fullscreen', function (e) {
-		e.preventDefault();
-		launchIntoFullscreen(document.getElementById("video"));
-		});
-		
-		$(document).on('click', '.icon-size-actual', function (e) {
-			e.preventDefault();
-			exitFullscreen();
-		});
-	  
-	  
-  
-  });
-  
-	  function launchIntoFullscreen(element) {
-		if(element.requestFullscreen) {
-			element.requestFullscreen();
-		} else if(element.mozRequestFullScreen) {
-			element.mozRequestFullScreen();
-		} else if(element.webkitRequestFullscreen) {
-			element.webkitRequestFullscreen();
-		} else if(element.msRequestFullscreen) {
-			element.msRequestFullscreen();
-		}
-		$(".icon-size-fullscreen").removeClass("icon-size-fullscreen").addClass("icon-size-actual");
-	}
-	function exitFullscreen() {
-		if(document.exitFullscreen) {
-			document.exitFullscreen();
-		} else if(document.mozCancelFullScreen) {
-			document.mozCancelFullScreen();
-		} else if(document.webkitExitFullscreen) {
-			document.webkitExitFullscreen();
-		}
-		$(".icon-size-actual").removeClass("icon-size-actual").addClass("icon-size-fullscreen");
-	}
-	$(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange', function(e){
-		e.preventDefault();
-		var fullScreen = document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement ? true : false;
-		if ( fullScreen ) {
-			$(".icon-size-fullscreen").removeClass("icon-size-fullscreen").addClass("icon-size-actual");
-		} else {
-			$(".icon-size-actual").removeClass("icon-size-actual").addClass("icon-size-fullscreen");
-		}
-	});
-
-
-</script>
-
-  <!-- Histats.com  START  (aync)-->
-<script type="text/javascript">var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,4373510,4,0,0,0,00010000']);
-_Hasync.push(['Histats.fasi', '1']);
-_Hasync.push(['Histats.track_hits', '']);
-(function() {
-var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
-hs.src = ('//s10.histats.com/js15_as.js');
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();</script>
-<noscript><a href="/" target="_blank"><img  src="//sstatic1.histats.com/0.gif?4373510&101" alt="" border="0"></a></noscript>
-<!-- Histats.com  END  -->

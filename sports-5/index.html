@@ -1,752 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- =========================
-     CHANGE WEBSITE TITLE HERE
-========================= -->
-<title>SPORTS LIVE 2026</title>
+    <title>English Premier League Live</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-:root{
-    --bg:#080c12;
-    --card:#101722;
-    --text:#ffffff;
-    --muted:#9aa5b3;
-    --accent:#00d9ff;
-    --accent2:#7c3aed;
-    --border:rgba(255,255,255,.10);
-}
+        body {
+            margin: 0;
+            padding: 20px 12px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111f;
+            color: #ffffff;
+        }
 
-body{
-    font-family:Arial,Helvetica,sans-serif;
-    background:var(--bg);
-    color:var(--text);
-}
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
 
-/* TOP BAR */
-.topbar{
-    height:34px;
-    background:#111923;
-    border-bottom:1px solid var(--border);
-    display:flex;
-    align-items:center;
-}
+        /* MAIN CONTENT LINK */
+        .main-link {
+            display: block;
+            color: inherit;
+            text-decoration: none;
+            cursor: pointer;
+        }
 
-.topbar-inner{
-    width:94%;
-    max-width:1100px;
-    margin:auto;
-    display:flex;
-    justify-content:space-between;
-    font-size:11px;
-    color:#c8d0da;
-}
+        /* EDIT TITLE HERE */
+        .page-title {
+            margin: 5px 0 18px;
+            text-align: center;
+            font-size: clamp(25px, 4vw, 38px);
+            font-weight: 800;
+            line-height: 1.3;
+            color: #ffffff;
+        }
 
-.live{
-    color:#fff;
-    font-weight:bold;
-}
+        /* EDIT PHOTO URL HERE */
+        .main-photo {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: cover;
+            border-radius: 8px;
+            background: #172438;
+        }
 
-.live::before{
-    content:"";
-    width:7px;
-    height:7px;
-    background:#ff3333;
-    display:inline-block;
-    border-radius:50%;
-    margin-right:6px;
-    box-shadow:0 0 10px #ff3333;
-}
+        /* EDIT DESCRIPTION HERE */
+        .description {
+            max-width: 850px;
+            margin: 12px auto 20px;
+            text-align: center;
+            font-size: 13px;
+            line-height: 1.7;
+            color: #d5deea;
+        }
 
-/* HEADER */
-header{
-    text-align:center;
-    padding:25px 15px 20px;
-}
+        /* BUTTON CONTAINER */
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 22px 0;
+        }
 
-.logo{
-    font-size:clamp(28px,5vw,45px);
-    font-weight:900;
-    letter-spacing:-1px;
-}
+        /* BUTTON STYLE */
+        .btn {
+            display: inline-block;
+            padding: 13px 27px;
+            border-radius: 6px;
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: bold;
+            transition: opacity 0.2s ease;
+        }
 
-.logo span{
-    color:var(--accent);
-}
+        .live-btn {
+            background: #e11d48;
+        }
 
-.subtitle{
-    color:var(--muted);
-    margin-top:10px;
-    font-size:13px;
-}
+        .signup-btn {
+            background: #059669;
+        }
 
-/* CONTAINER */
-.container{
-    width:94%;
-    max-width:1100px;
-    margin:auto;
-}
+        .btn:hover {
+            opacity: 0.82;
+        }
 
-/* AD */
-.ad-title{
-    text-align:center;
-    font-size:9px;
-    color:#687484;
-    text-transform:uppercase;
-    letter-spacing:1px;
-    margin-bottom:6px;
-}
+        .footer {
+            margin-top: 28px;
+            text-align: center;
+            color: #8290a5;
+            font-size: 12px;
+        }
 
-.ad-box{
-    min-height:90px;
-    width:100%;
-    border:1px dashed rgba(255,255,255,.18);
-    border-radius:8px;
-    background:rgba(255,255,255,.025);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    color:#667180;
-    font-size:10px;
-    overflow:hidden;
-}
+        @media (max-width: 480px) {
+            body {
+                padding: 15px 10px;
+            }
 
-.ad-box iframe,
-.ad-box img{
-    max-width:100%;
-}
+            .description {
+                font-size: 12px;
+            }
 
-/* HERO */
-.hero{
-    position:relative;
-    min-height:480px;
-    margin-top:25px;
-    border-radius:15px;
-    overflow:hidden;
-
-    background:
-        linear-gradient(
-            90deg,
-            rgba(2,7,13,.88),
-            rgba(2,7,13,.30)
-        ),
-        url("https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=1600&q=85");
-
-    background-size:cover;
-    background-position:center;
-    display:flex;
-    align-items:flex-end;
-
-    border:1px solid rgba(255,255,255,.12);
-    box-shadow:0 20px 60px rgba(0,0,0,.45);
-}
-
-.hero-content{
-    padding:45px;
-    max-width:700px;
-}
-
-.badge{
-    display:inline-block;
-    padding:7px 12px;
-    border-radius:30px;
-    background:rgba(0,0,0,.55);
-    border:1px solid rgba(255,255,255,.15);
-    font-size:10px;
-    font-weight:bold;
-    text-transform:uppercase;
-}
-
-.hero h1{
-    font-size:clamp(35px,6vw,65px);
-    line-height:.95;
-    margin:18px 0;
-    letter-spacing:-2px;
-}
-
-.hero p{
-    color:#c2cbd6;
-    max-width:580px;
-    line-height:1.6;
-    font-size:14px;
-}
-
-.buttons{
-    display:flex;
-    gap:10px;
-    margin-top:25px;
-    flex-wrap:wrap;
-}
-
-.btn{
-    border:none;
-    cursor:pointer;
-    padding:13px 20px;
-    border-radius:8px;
-    font-weight:bold;
-    font-size:12px;
-}
-
-.primary{
-    background:var(--accent);
-    color:#001016;
-}
-
-.secondary{
-    background:rgba(255,255,255,.10);
-    color:white;
-    border:1px solid rgba(255,255,255,.15);
-}
-
-.btn:hover{
-    transform:translateY(-2px);
-}
-
-/* SECTIONS */
-.section{
-    margin-top:30px;
-    margin-bottom:30px;
-}
-
-.section-head{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    margin-bottom:14px;
-}
-
-.section-head h2{
-    font-size:19px;
-}
-
-.section-head span{
-    color:#738092;
-    font-size:10px;
-}
-
-/* CARDS */
-.cards{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:14px;
-}
-
-.card{
-    padding:20px;
-    background:linear-gradient(
-        145deg,
-        rgba(255,255,255,.05),
-        rgba(255,255,255,.015)
-    );
-    border:1px solid var(--border);
-    border-radius:12px;
-}
-
-.card small{
-    color:var(--accent);
-    font-size:9px;
-    font-weight:bold;
-    text-transform:uppercase;
-    letter-spacing:1px;
-}
-
-.card h3{
-    margin:9px 0;
-    font-size:16px;
-}
-
-.card p{
-    color:var(--muted);
-    font-size:12px;
-    line-height:1.5;
-}
-
-/* BODY AD */
-.body-ad{
-    margin:30px 0;
-}
-
-/* FOOTER */
-footer{
-    margin-top:45px;
-    border-top:1px solid var(--border);
-    color:#657182;
-    font-size:10px;
-}
-
-.footer-inner{
-    width:94%;
-    max-width:1100px;
-    margin:auto;
-    padding:25px 0;
-    display:flex;
-    justify-content:space-between;
-    gap:15px;
-}
-
-/* MODAL */
-.modal{
-    display:none;
-    position:fixed;
-    inset:0;
-    background:rgba(0,0,0,.78);
-    z-index:999;
-    align-items:center;
-    justify-content:center;
-    padding:20px;
-}
-
-.modal.show{
-    display:flex;
-}
-
-.modal-box{
-    width:100%;
-    max-width:500px;
-    background:#101722;
-    border:1px solid var(--border);
-    border-radius:14px;
-    padding:25px;
-}
-
-.modal-box h2{
-    margin-bottom:10px;
-}
-
-.modal-box p{
-    color:var(--muted);
-    font-size:13px;
-    line-height:1.6;
-}
-
-.close{
-    float:right;
-    background:none;
-    border:0;
-    color:white;
-    font-size:24px;
-    cursor:pointer;
-}
-
-/* MOBILE */
-@media(max-width:700px){
-
-    .hero{
-        min-height:520px;
-    }
-
-    .hero-content{
-        padding:25px;
-    }
-
-    .cards{
-        grid-template-columns:1fr;
-    }
-
-    .footer-inner{
-        flex-direction:column;
-        text-align:center;
-    }
-
-}
-</style>
+            .btn {
+                padding: 12px 20px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-<!-- =========================
-     TOP BAR
-========================= -->
-<div class="topbar">
-    <div class="topbar-inner">
+    <div class="container">
 
-        <div class="live">
-            SPORTS LIVE
-        </div>
+        <!--
+        MAIN CONTENT LINK
+        Title, photo and description will open this URL.
+        Change the URL below.
+        -->
 
-        <!-- CHANGE THIS -->
-        <div>
-            Login | Register
-        </div>
+        <a class="main-link"
+           href="https://example.com/main"
+           target="_blank"
+           rel="noopener noreferrer">
 
-    </div>
-</div>
+            <!-- CHANGE TITLE HERE -->
+            <h1 class="page-title">
+                English Premier League Live
+            </h1>
 
+            <!-- CHANGE PHOTO URL HERE -->
+            <img
+                class="main-photo"
+                src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2012/09/27/16/emirates.jpg"
+                alt="Football stadium"
+            >
 
-<!-- =========================
-     HEADER
-========================= -->
-<header>
+            <!-- CHANGE DESCRIPTION HERE -->
+            <p class="description">
+                Watch English Premier League Live Streaming
+                Online, TV Coverage, Replays, Highlights from Anywhere
+                at Anytime. Optimized for PC, Mac, iPad, iPhone,
+                Android, PS4, Xbox One, and Smart TVs.
+            </p>
 
-    <!-- CHANGE WEBSITE TITLE -->
-    <div class="logo">
-        SPORTS <span>LIVE</span> 2026
-    </div>
+        </a>
 
-    <!-- CHANGE SUBTITLE -->
-    <div class="subtitle">
-        Watch sports events, matches and live updates in one place.
-    </div>
-
-</header>
-
-
-<div class="container">
-
-
-<!-- ==================================================
-     TOP BANNER AD
-
-     ????? ????? Ad Network-?? code ?????
-
-     ????:
-
-     <script>
-        YOUR AD SCRIPT
-     </script>
-
-================================================== -->
-
-<div class="ad-title">
-    Advertisement
-</div>
-
-<div class="ad-box">
-
-    <!-- PASTE YOUR AD CODE HERE -->
-
-    <span>
-        TOP BANNER AD 970 × 90
-    </span>
-
-</div>
-
-
-<!-- =========================
-     HERO SECTION
-========================= -->
-
-<section class="hero">
-
-    <div class="hero-content">
-
-        <div class="badge">
-            ? Live Sports
-        </div>
-
-        <!-- CHANGE HERO TITLE -->
-        <h1>
-            BIG MATCHES.<br>
-            ONE PLACE.
-        </h1>
-
-        <!-- CHANGE DESCRIPTION -->
-        <p>
-            Welcome to your custom sports landing page.
-            Add your own matches, sports news, events,
-            sponsors and advertisements here.
-        </p>
-
+        <!-- BUTTONS HAVE THEIR OWN SEPARATE LINKS -->
         <div class="buttons">
 
-            <button
-                class="btn primary"
-                onclick="goMatches()">
-                VIEW MATCHES
-            </button>
+            <!-- CHANGE LIVE BUTTON URL HERE -->
+            <a class="btn live-btn"
+               href="https://www.profitableratecpmnetwork.com/deatb5cq?key=3bb2fcf05b0a00ded3ca7ce254fb74a2"
+               target="_blank"
+               rel="noopener noreferrer">
+                LIVE NOW
+            </a>
 
-            <button
-                class="btn secondary"
-                onclick="openInfo()">
-                MORE INFO
-            </button>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- ==================================================
-     BODY BANNER AD
-================================================== -->
-
-<div class="body-ad">
-
-    <div class="ad-title">
-        Advertisement
-    </div>
-
-    <div class="ad-box">
-
-        <!-- PASTE YOUR BODY AD CODE HERE -->
-
-        <span>
-            BODY BANNER AD 728 × 90
-        </span>
-
-    </div>
-
-</div>
-
-
-<!-- =========================
-     SPORTS SECTION
-========================= -->
-
-<section
-    class="section"
-    id="matches">
-
-    <div class="section-head">
-
-        <h2>
-            Featured Sports
-        </h2>
-
-        <span>
-            EDIT FROM HTML
-        </span>
-
-    </div>
-
-
-    <div class="cards">
-
-
-        <!-- CARD 1 -->
-
-        <div class="card">
-
-            <small>
-                Football
-            </small>
-
-            <!-- CHANGE CARD TITLE -->
-            <h3>
-                Today's Matches
-            </h3>
-
-            <!-- CHANGE CARD TEXT -->
-            <p>
-                Add your football match schedule,
-                event information or promotional text here.
-            </p>
+            <!-- CHANGE SIGNUP BUTTON URL HERE -->
+            <a class="btn signup-btn"
+               href="https://www.profitableratecpmnetwork.com/deatb5cq?key=3bb2fcf05b0a00ded3ca7ce254fb74a2"
+               target="_blank"
+               rel="noopener noreferrer">
+                SIGNUP NOW
+            </a>
 
         </div>
 
-
-        <!-- CARD 2 -->
-
-        <div class="card">
-
-            <small>
-                Basketball
-            </small>
-
-            <h3>
-                Live Events
-            </h3>
-
-            <p>
-                Add basketball events, league information
-                or any content you want.
-            </p>
-
-        </div>
-
-
-        <!-- CARD 3 -->
-
-        <div class="card">
-
-            <small>
-                Tennis
-            </small>
-
-            <h3>
-                Latest Action
-            </h3>
-
-            <p>
-                Add tennis news, match information,
-                tournament details or other content.
-            </p>
-
-        </div>
-
-
-    </div>
-
-</section>
-
-
-<!-- ==================================================
-     SECOND BODY AD
-================================================== -->
-
-<div class="body-ad">
-
-    <div class="ad-title">
-        Advertisement
-    </div>
-
-    <div class="ad-box">
-
-        <!-- PASTE YOUR SECOND AD CODE HERE -->
-
-        <span>
-            SECOND BODY AD
-        </span>
-
-    </div>
-
-</div>
-
-
-<!-- =========================
-     INFORMATION
-========================= -->
-
-<section class="section">
-
-    <div class="card">
-
-        <small>
-            Sports Hub
-        </small>
-
-        <h3>
-            Your Content Goes Here
-        </h3>
-
-        <p>
-            You can replace this section with match schedules,
-            sports news, sponsor information, announcements,
-            videos or any other content.
-        </p>
-
-    </div>
-
-</section>
-
-
-</div>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    <div class="footer-inner">
-
-        <!-- CHANGE COPYRIGHT -->
-        <div>
-            © 2026 SPORTS LIVE. All Rights Reserved.
-        </div>
-
-        <div>
-            Privacy Policy · Terms · Contact
+        <div class="footer">
+            Enjoy the match experience
         </div>
 
     </div>
-
-</footer>
-
-
-<!-- =========================
-     MODAL
-========================= -->
-
-<div
-    class="modal"
-    id="infoModal">
-
-    <div class="modal-box">
-
-        <button
-            class="close"
-            onclick="closeInfo()">
-            ×
-        </button>
-
-        <h2>
-            Sports Live
-        </h2>
-
-        <p>
-            Replace this popup with your own information,
-            sponsor details, match information or website
-            announcement.
-        </p>
-
-    </div>
-
-</div>
-
-
-<script>
-
-/* VIEW MATCHES BUTTON */
-
-function goMatches(){
-
-    document
-        .getElementById("matches")
-        .scrollIntoView({
-            behavior:"smooth"
-        });
-
-}
-
-
-/* MORE INFO BUTTON */
-
-function openInfo(){
-
-    document
-        .getElementById("infoModal")
-        .classList.add("show");
-
-}
-
-
-/* CLOSE MODAL */
-
-function closeInfo(){
-
-    document
-        .getElementById("infoModal")
-        .classList.remove("show");
-
-}
-
-
-/* CLICK OUTSIDE TO CLOSE */
-
-document
-    .getElementById("infoModal")
-    .addEventListener("click", function(e){
-
-        if(e.target === this){
-            closeInfo();
-        }
-
-    });
-
-</script>
 
 </body>
+<script>
+  atOptions = {
+    'key' : 'a7015b3784e2b261a64527ef1c8572fd',
+    'format' : 'iframe',
+    'height' : 50,
+    'width' : 320,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/a7015b3784e2b261a64527ef1c8572fd/invoke.js"></script>
 </html>
